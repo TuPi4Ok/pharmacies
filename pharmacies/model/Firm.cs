@@ -9,7 +9,7 @@ namespace pharmacies.model
     public class Firm
     {
         private int id;
-        private String Name;
+        private String name;
         private String address;
         private String telephoneNumber;
         List<Medicine> medicines;
@@ -17,7 +17,7 @@ namespace pharmacies.model
         public int Id { get => id; set => id = value; }
         public string TelephoneNumber { get => telephoneNumber; set => telephoneNumber = value; }
         public string Address { get => address; set => address = value; }
-        public string Name1 { get => Name; set => Name = value; }
+        public string Name { get => name; set => name = value; }
         internal List<Medicine> Medicines { get => medicines; set => medicines = value; }
     }
 }

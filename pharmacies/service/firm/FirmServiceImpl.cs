@@ -17,5 +17,10 @@ namespace pharmacies.service.firm
             firmRepository.save(firm);
             return true;
         }
+
+        public List<Firm> getAll()
+        {
+            return firmRepository.findAllFirms();
+        }
     }
 }

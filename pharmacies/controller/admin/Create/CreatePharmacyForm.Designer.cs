@@ -36,6 +36,8 @@
             this.medicinesList = new System.Windows.Forms.ListBox();
             this.address = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +54,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.name);
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.save);
             this.groupBox1.Controls.Add(this.addMedicins);
             this.groupBox1.Controls.Add(this.label3);
@@ -60,16 +64,16 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(195, 202);
+            this.groupBox1.Size = new System.Drawing.Size(224, 236);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Введите данные";
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(6, 164);
+            this.save.Location = new System.Drawing.Point(9, 188);
             this.save.Name = "save";
-            this.save.Size = new System.Drawing.Size(181, 32);
+            this.save.Size = new System.Drawing.Size(193, 32);
             this.save.TabIndex = 5;
             this.save.Text = "Сохранить";
             this.save.UseVisualStyleBackColor = true;
@@ -77,7 +81,7 @@
             // 
             // addMedicins
             // 
-            this.addMedicins.Location = new System.Drawing.Point(74, 135);
+            this.addMedicins.Location = new System.Drawing.Point(95, 159);
             this.addMedicins.Name = "addMedicins";
             this.addMedicins.Size = new System.Drawing.Size(107, 23);
             this.addMedicins.TabIndex = 4;
@@ -88,7 +92,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 47);
+            this.label3.Location = new System.Drawing.Point(6, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 3;
@@ -97,7 +101,7 @@
             // medicinesList
             // 
             this.medicinesList.FormattingEnabled = true;
-            this.medicinesList.Location = new System.Drawing.Point(74, 46);
+            this.medicinesList.Location = new System.Drawing.Point(95, 71);
             this.medicinesList.Name = "medicinesList";
             this.medicinesList.Size = new System.Drawing.Size(107, 82);
             this.medicinesList.TabIndex = 2;
@@ -105,7 +109,7 @@
             // 
             // address
             // 
-            this.address.Location = new System.Drawing.Point(74, 16);
+            this.address.Location = new System.Drawing.Point(95, 45);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(107, 20);
             this.address.TabIndex = 1;
@@ -114,22 +118,40 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 23);
+            this.label2.Location = new System.Drawing.Point(6, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Адрес";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // name
+            // 
+            this.name.Location = new System.Drawing.Point(95, 19);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(107, 20);
+            this.name.TabIndex = 7;
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(83, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Наименование";
+            // 
             // CreatePharmacyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(233, 265);
+            this.ClientSize = new System.Drawing.Size(247, 291);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "CreatePharmacyForm";
             this.Text = "CreatePharmacyForm";
+            this.Load += new System.EventHandler(this.CreatePharmacyForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -147,5 +169,7 @@
         private System.Windows.Forms.Button save;
         private System.Windows.Forms.Button addMedicins;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.Label label4;
     }
 }

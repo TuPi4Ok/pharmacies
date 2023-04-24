@@ -14,7 +14,6 @@ namespace pharmacies.model
         private TypesOfPackaging typeOfPackaging;
         private MethodOfConsumption methodOfConsumption;
         private int cost;
-        private String contraindications;
         private DateTime bestBeforeDate;
         List<PharmacyMedicine> pharmacyMedicine;
         private int firmId;
@@ -24,7 +23,6 @@ namespace pharmacies.model
 
         public int Id { get => id; set => id = value; }
         public int Cost { get => cost; set => cost = value; }
-        public string Contraindications { get => contraindications; set => contraindications = value; }
         public DateTime BestBeforeDate { get => bestBeforeDate; set => bestBeforeDate = value; }
         internal TypesOfPackaging TypeOfPackaging { get => typeOfPackaging; set => typeOfPackaging = value; }
         internal MethodOfConsumption MethodOfConsumption { get => methodOfConsumption; set => methodOfConsumption = value; }
@@ -75,6 +73,50 @@ namespace pharmacies.model
                     return "трансдермально";
                 default:
                     return "";
+            }
+        }
+
+        internal static TypesOfPackaging getTypeOfPackaging(String type)
+        {
+            switch (type)
+            {
+                case "Групповая" :
+                    return TypesOfPackaging.group;
+                case "Первичная":
+                    return TypesOfPackaging.Primary;
+                case "Вторичная":
+                    return TypesOfPackaging.Secondary;
+                case "Третичная":
+                    return TypesOfPackaging.Tertiary;
+                default:
+                    return TypesOfPackaging.Secondary;
+            }
+        }
+
+        internal static MethodOfConsumption getMethodOfConsumption(String method)
+        {
+            switch (method)
+            {
+                case "кожное введение":
+                    return MethodOfConsumption.dermalAdministration;
+                case "ингаляция":
+                    return MethodOfConsumption.inhalation;
+                case "интраназальный":
+                    return MethodOfConsumption.intranasal;
+                case "внутриглазной":
+                    return MethodOfConsumption.intraocular;
+                case "внутривенно":
+                    return MethodOfConsumption.intravenously;
+                case "ректальный":
+                    return MethodOfConsumption.rectal;
+                case "сублингвальный":
+                    return MethodOfConsumption.sublingual;
+                case "через рот":
+                    return MethodOfConsumption.throughTheMmouth;
+                case "трансдермально":
+                    return MethodOfConsumption.transdermally;
+                default:
+                    return MethodOfConsumption.intravenously;
             }
         }
     }

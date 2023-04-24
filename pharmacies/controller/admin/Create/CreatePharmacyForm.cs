@@ -16,19 +16,24 @@ namespace pharmacies.controller.admin.Create
 {
     public partial class CreatePharmacyForm : Form
     {
-        List<Medicine> medicinesToSave = new List<Medicine>();
         MedicineServiceImpl medicineService = new MedicineServiceImpl();
         PharmacyServiceImpl pharmacyService = new PharmacyServiceImpl();
         PharmacyMedicineService pharmacyMedicineService = new PharmacyMedicineServiceImpl();
+
+        List<Medicine> medicinesToSave = new List<Medicine>();
+        List<Medicine> allMedicines;
+        //Dictionary<String, Medicine> medicineMap = new Dictionary<String, Medicine>();
         public CreatePharmacyForm()
         {
             InitializeComponent();
-            List<Medicine> AllMedicines = medicineService.getAll();
-            if(AllMedicines != null)
+
+            allMedicines = medicineService.getAll();
+
+            if (allMedicines != null)
             {
-                foreach (var medicine in AllMedicines)
+                foreach (var medicine in allMedicines)
                 {
-                    medicinesList.Items.Add(medicine);
+                    medicinesList.Items.Add(medicine + " " + medicine.Firm.Name);
                 }
             }
 
@@ -49,7 +54,7 @@ namespace pharmacies.controller.admin.Create
         }
         private void addEnable()
         {
-            if (medicinesList.SelectedItems[0] != null)
+            if (medicinesList.SelectedItems.Count != 0)
             {
                 save.Enabled = true;
             }
@@ -66,8 +71,17 @@ namespace pharmacies.controller.admin.Create
 
         private void addMedicins_Click(object sender, EventArgs e)
         {
-            medicinesToSave.Add((Medicine)medicinesList.SelectedItems[0]);
-            medicinesList.Items.Remove(medicinesList.SelectedItems[0]);
+            foreach(var item in allMedicines)
+            {
+                String itemName = medicinesList.SelectedItems[0].ToString().Split(' ')[0];
+                String itemFirm = medicinesList.SelectedItems[0].ToString().Split(' ')[1];
+                if (item.Name == itemName && item.Firm.Name == itemFirm)
+                {
+                    medicinesToSave.Add(item);
+                    medicinesList.Items.Remove(medicinesList.SelectedItems[0]);
+                }
+            }
+           
         }
 
 
@@ -80,6 +94,7 @@ namespace pharmacies.controller.admin.Create
         {
             Pharmacy pharmacy = new Pharmacy();
             pharmacy.Address = address.Text;
+            pharmacy.Name = name.Text;
             if (medicinesToSave != null)
             {
                 foreach (var item in medicinesToSave)
@@ -96,7 +111,17 @@ namespace pharmacies.controller.admin.Create
 
         private void medicinesList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            addEnable();
+        }
 
+        private void CreatePharmacyForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+            saveEnable();
         }
     }
 }

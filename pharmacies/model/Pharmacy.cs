@@ -9,11 +9,13 @@ namespace pharmacies.model
     public class Pharmacy
     {
         private int id;
+        private string name;
         private String address;
         List<PharmacyMedicine> pharmacyMedicine;
 
         public int Id { get => id; set => id = value; }
         public string Address { get => address; set => address = value; }
+        public string Name { get => name; set => name = value; }
         internal List<PharmacyMedicine> PharmacyMedicine { get => pharmacyMedicine; set => pharmacyMedicine = value; }
     }
 }

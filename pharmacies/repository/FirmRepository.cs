@@ -18,5 +18,10 @@ namespace pharmacies.repository
             db.Firms.Add(firm);
             db.SaveChanges();
         }
+
+        public List<Firm> findAllFirms()
+        {
+            return db.Firms.ToList();
+        }
     }
 }
