@@ -1,6 +1,7 @@
 ﻿using pharmacies.model;
 using pharmacies.service.madicine;
 using pharmacies.service.pharmacy;
+using pharmacies.service.pharmacyMedicine;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,15 +19,19 @@ namespace pharmacies.controller.admin.Create
         List<Medicine> medicinesToSave = new List<Medicine>();
         MedicineServiceImpl medicineService = new MedicineServiceImpl();
         PharmacyServiceImpl pharmacyService = new PharmacyServiceImpl();
-
+        PharmacyMedicineService pharmacyMedicineService = new PharmacyMedicineServiceImpl();
         public CreatePharmacyForm()
         {
             InitializeComponent();
             List<Medicine> AllMedicines = medicineService.getAll();
-            foreach (var medicine in AllMedicines)
+            if(AllMedicines != null)
             {
-                medicinesList.Items.Add(medicine);
+                foreach (var medicine in AllMedicines)
+                {
+                    medicinesList.Items.Add(medicine);
+                }
             }
+
             save.Enabled = false;
             addMedicins.Enabled = false;
         }
@@ -75,8 +80,23 @@ namespace pharmacies.controller.admin.Create
         {
             Pharmacy pharmacy = new Pharmacy();
             pharmacy.Address = address.Text;
-            pharmacy.Medicines = medicinesToSave;
+            if (medicinesToSave != null)
+            {
+                foreach (var item in medicinesToSave)
+                {
+                    PharmacyMedicine pharmacyMedicine = new PharmacyMedicine();
+                    pharmacyMedicine.Medicine = item;
+                    pharmacyMedicine.Pharmacy = pharmacy;
+                    pharmacyMedicineService.savePharmacyMedicine(pharmacyMedicine);
+                }
+            }
             pharmacyService.savePharmacy(pharmacy);
+            Close();
+        }
+
+        private void medicinesList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

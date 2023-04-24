@@ -17,5 +17,10 @@ namespace pharmacies.service.pharmacy
             pharmacyRepository.save(pharmacy);
             return true;
         }
+
+        public List<Pharmacy> getAll()
+        {
+            return pharmacyRepository.findAllPharmacies();
+        }
     }
 }

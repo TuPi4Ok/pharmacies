@@ -16,7 +16,7 @@ namespace pharmacies.model
         private int cost;
         private String contraindications;
         private DateTime bestBeforeDate;
-        List<Pharmacy> pharmacies;
+        List<PharmacyMedicine> pharmacyMedicine;
         private int firmId;
         private Firm firm;
         private Discount discount;
@@ -28,11 +28,11 @@ namespace pharmacies.model
         public DateTime BestBeforeDate { get => bestBeforeDate; set => bestBeforeDate = value; }
         internal TypesOfPackaging TypeOfPackaging { get => typeOfPackaging; set => typeOfPackaging = value; }
         internal MethodOfConsumption MethodOfConsumption { get => methodOfConsumption; set => methodOfConsumption = value; }
-        internal List<Pharmacy> Pharmacies { get => pharmacies; set => pharmacies = value; }
         public int FirmId { get => firmId; set => firmId = value; }
         internal Firm Firm { get => firm; set => firm = value; }
         internal Discount Discount { get => discount; set => discount = value; }
         public string Name { get => name; set => name = value; }
+        internal List<PharmacyMedicine> PharmacyMedicine { get => pharmacyMedicine; set => pharmacyMedicine = value; }
 
         public String getFormatTypeOfPackaging()
         {

@@ -101,6 +101,7 @@
             this.medicinesList.Name = "medicinesList";
             this.medicinesList.Size = new System.Drawing.Size(107, 82);
             this.medicinesList.TabIndex = 2;
+            this.medicinesList.SelectedIndexChanged += new System.EventHandler(this.medicinesList_SelectedIndexChanged);
             // 
             // address
             // 

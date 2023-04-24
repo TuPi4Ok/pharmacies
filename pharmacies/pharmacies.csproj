@@ -218,12 +218,14 @@
     <Compile Include="model\Firm.cs" />
     <Compile Include="model\Medicine.cs" />
     <Compile Include="model\Pharmacy.cs" />
+    <Compile Include="model\PharmacyMedicine.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="repository\DiscountRepository.cs" />
     <Compile Include="repository\FirmRepository.cs" />
     <Compile Include="repository\MedicineRepository.cs" />
+    <Compile Include="repository\PharmacyMedicineRepository.cs" />
     <Compile Include="repository\PharmacyRepository.cs" />
     <Compile Include="repository\UserRepository.cs" />
     <Compile Include="service\discount\DiscountService.cs" />
@@ -232,6 +234,8 @@
     <Compile Include="service\firm\FirmServiceImpl.cs" />
     <Compile Include="service\madicine\MedicineService.cs" />
     <Compile Include="service\madicine\MedicineServiceImpl.cs" />
+    <Compile Include="service\pharmacyMedicine\PharmacyMedicineService.cs" />
+    <Compile Include="service\pharmacyMedicine\PharmacyMedicineServiceImpl.cs" />
     <Compile Include="service\pharmacy\PharmacyService.cs" />
     <Compile Include="service\pharmacy\PharmacyServiceImpl.cs" />
     <Compile Include="service\user\UserServiseImpl.cs" />

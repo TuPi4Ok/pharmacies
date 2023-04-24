@@ -10,10 +10,10 @@ namespace pharmacies.model
     {
         private int id;
         private String address;
-        List<Medicine> medicines;
+        List<PharmacyMedicine> pharmacyMedicine;
 
         public int Id { get => id; set => id = value; }
         public string Address { get => address; set => address = value; }
-        internal List<Medicine> Medicines { get => medicines; set => medicines = value; }
+        internal List<PharmacyMedicine> PharmacyMedicine { get => pharmacyMedicine; set => pharmacyMedicine = value; }
     }
 }

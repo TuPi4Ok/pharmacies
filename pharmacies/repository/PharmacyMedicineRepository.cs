@@ -8,24 +8,14 @@ using System.Threading.Tasks;
 
 namespace pharmacies.repository
 {
-    class MedicineRepository
+    internal class PharmacyMedicineRepository
     {
-
         MyApplicationContext db = new MyApplicationContext();
 
-        public void save(Medicine medicine)
+        public void save(PharmacyMedicine pharmacyMedicine)
         {
-            db.Medicines.Add(medicine);
+            db.PharmacyMedicines.Add(pharmacyMedicine);
             db.SaveChanges();
-        }
-
-        public List<Medicine> findAllMedicines()
-        {
-            try 
-            {
-                return db.Medicines.ToList();
-            } catch { return null; }
-            
         }
     }
 }

@@ -10,5 +10,7 @@ namespace pharmacies.service.pharmacy
     interface PharmacyService
     {
         bool savePharmacy(Pharmacy pharmacy);
+        List<Pharmacy> getAll();
+
     }
 }

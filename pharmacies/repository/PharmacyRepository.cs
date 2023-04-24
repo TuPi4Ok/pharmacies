@@ -15,8 +15,13 @@ namespace pharmacies.repository
 
         public void save(Pharmacy pharmacy)
         {
-            db.Pharmacies.Add(pharmacy);
+            db.Pharmacys.Add(pharmacy);
             db.SaveChanges();
+        }
+
+        public List<Pharmacy> findAllPharmacies()
+        {
+            return db.Pharmacys.ToList();
         }
     }
 }
