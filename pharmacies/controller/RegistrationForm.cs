@@ -76,6 +76,7 @@ namespace pharmacies.controller
             {
                 user.Role = Role.BOYER;
             }
+
             if (userServise.saveUser(user))
             {
                 Close();

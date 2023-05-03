@@ -1,4 +1,5 @@
-﻿using pharmacies.config;
+﻿using Microsoft.EntityFrameworkCore;
+using pharmacies.config;
 using pharmacies.model;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,11 @@ namespace pharmacies.repository
         {
             db.Discounts.Add(discount);
             db.SaveChanges();
+        }
+
+        public List<Discount> findAllDiscounts()
+        {
+            return db.Discounts.Include(c => c.Medicine).ToList();
         }
     }
 }

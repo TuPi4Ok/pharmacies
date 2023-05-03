@@ -10,5 +10,7 @@ namespace pharmacies.service.discount
     interface DiscountService
     {
         bool saveDiscount(Discount discount);
+
+        List<Discount> getAll();
     }
 }

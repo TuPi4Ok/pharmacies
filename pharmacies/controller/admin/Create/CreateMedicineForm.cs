@@ -2,6 +2,7 @@
 using pharmacies.model;
 using pharmacies.repository;
 using pharmacies.service.firm;
+using pharmacies.service.madicine;
 using pharmacies.service.pharmacy;
 using pharmacies.service.pharmacyMedicine;
 using System;
@@ -22,6 +23,7 @@ namespace pharmacies.controller.admin.Create
         PharmacyServiceImpl pharmacyService = new PharmacyServiceImpl();
         FirmServiceImpl firmService = new FirmServiceImpl();
         PharmacyMedicineServiceImpl pharmacyMedicineService = new PharmacyMedicineServiceImpl();
+        MedicineServiceImpl medicineService = new MedicineServiceImpl();
 
         List<Pharmacy> PharmaciesToSave = new List<Pharmacy>();
         List<Pharmacy> allPharmacies = new List<Pharmacy>();
@@ -36,6 +38,7 @@ namespace pharmacies.controller.admin.Create
             setFirm();
             setPharmacyList();
             addMedicins.Enabled = false;
+            save.Enabled = false;
         }
 
         private void setPharmacyList()
@@ -80,7 +83,7 @@ namespace pharmacies.controller.admin.Create
 
         private void saveEnable()
         {
-            if (name.Text.Length > 0 && cost.Text.Length > 0 && typeOfPackaging.Text.Length > 0 && methodOfConsumption.Text.Length > 0)
+            if (name.Text.Length > 0 && cost.Text.Length > 0 && typeOfPackaging.Text.Length > 0 && methodOfConsumption.Text.Length > 0 && firmBox.Text.Length > 0)
             {
                 save.Enabled = true;
             }
@@ -115,16 +118,29 @@ namespace pharmacies.controller.admin.Create
             medicine.MethodOfConsumption = Medicine.getMethodOfConsumption(methodOfConsumption.Text);
             medicine.Cost = Convert.ToInt32(cost.Text);
             medicine.BestBeforeDate = bestBeforeDate.Value;
-            if (PharmaciesToSave != null)
+
+            List<Firm> allFirrms = firmService.getAll();
+            foreach (var item in allFirrms)
             {
-                foreach (var item in PharmaciesToSave)
+                if(item.Name == firmBox.Text)
                 {
-                    PharmacyMedicine pharmacyMedicine = new PharmacyMedicine();
-                    pharmacyMedicine.Medicine = medicine;
-                    pharmacyMedicine.Pharmacy = item;
-                    pharmacyMedicineService.savePharmacyMedicine(pharmacyMedicine);
+                    medicine.Firm = item;
                 }
             }
+
+            //List <PharmacyMedicine> pharmacyMedicines = new List<PharmacyMedicine>();
+            //if (PharmaciesToSave != null)
+            //{
+            //    foreach (var item in PharmaciesToSave)
+            //    {
+            //        PharmacyMedicine pharmacyMedicine = new PharmacyMedicine();
+            //        pharmacyMedicine.MedicineId = medicine.Id;
+            //        pharmacyMedicine.PharmacyId = item.Id;
+            //        pharmacyMedicines.Add(pharmacyMedicine);
+            //    }
+            //}
+            //medicine.PharmacyMedicine = pharmacyMedicines;
+            medicineService.saveMedicine(medicine);
             Close();
         }
 

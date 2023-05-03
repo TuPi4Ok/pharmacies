@@ -1,4 +1,5 @@
-﻿using pharmacies.config;
+﻿using Microsoft.EntityFrameworkCore;
+using pharmacies.config;
 using pharmacies.model;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace pharmacies.repository
 
         public List<Pharmacy> findAllPharmacies()
         {
-            return db.Pharmacys.ToList();
+            return db.Pharmacys.Include(c => c.PharmacyMedicine).ToList();
         }
     }
 }

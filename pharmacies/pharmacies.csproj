@@ -175,6 +175,18 @@
   <ItemGroup>
     <Compile Include="config\ApplicationContext.cs" />
     <Compile Include="config\Session.cs" />
+    <Compile Include="controller\admin\Create\CreateDiscountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controller\admin\Create\CreateDiscountForm.Designer.cs">
+      <DependentUpon>CreateDiscountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controller\admin\Create\CreateFirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controller\admin\Create\CreateFirmForm.Designer.cs">
+      <DependentUpon>CreateFirmForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="controller\admin\Create\CreateMedicineForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +198,12 @@
     </Compile>
     <Compile Include="controller\admin\Create\CreatePharmacyForm.Designer.cs">
       <DependentUpon>CreatePharmacyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controller\admin\Read\ReadMedicineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controller\admin\Read\ReadMedicineForm.Designer.cs">
+      <DependentUpon>ReadMedicineForm.cs</DependentUpon>
     </Compile>
     <Compile Include="controller\admin\StartForm.cs">
       <SubType>Form</SubType>
@@ -240,11 +258,20 @@
     <Compile Include="service\pharmacy\PharmacyServiceImpl.cs" />
     <Compile Include="service\user\UserServiseImpl.cs" />
     <Compile Include="service\user\UserSerrvise.cs" />
+    <EmbeddedResource Include="controller\admin\Create\CreateDiscountForm.resx">
+      <DependentUpon>CreateDiscountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controller\admin\Create\CreateFirmForm.resx">
+      <DependentUpon>CreateFirmForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controller\admin\Create\CreateMedicineForm.resx">
       <DependentUpon>CreateMedicineForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controller\admin\Create\CreatePharmacyForm.resx">
       <DependentUpon>CreatePharmacyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controller\admin\Read\ReadMedicineForm.resx">
+      <DependentUpon>ReadMedicineForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controller\admin\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>

@@ -14,6 +14,10 @@ namespace pharmacies.service.firm
 
         public bool saveFirm(Firm firm)
         {
+            if (firmRepository.findFirmByName(firm.Name) != null)
+            {
+
+            }
             firmRepository.save(firm);
             return true;
         }

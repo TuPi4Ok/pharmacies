@@ -33,7 +33,7 @@ namespace pharmacies.controller.admin.Create
             {
                 foreach (var medicine in allMedicines)
                 {
-                    medicinesList.Items.Add(medicine + " " + medicine.Firm.Name);
+                    medicinesList.Items.Add(medicine.Name);
                 }
             }
 
@@ -56,11 +56,11 @@ namespace pharmacies.controller.admin.Create
         {
             if (medicinesList.SelectedItems.Count != 0)
             {
-                save.Enabled = true;
+                addMedicins.Enabled = true;
             }
             else
             {
-                save.Enabled = false;
+                addMedicins.Enabled = false;
             }
         }
 
@@ -73,9 +73,7 @@ namespace pharmacies.controller.admin.Create
         {
             foreach(var item in allMedicines)
             {
-                String itemName = medicinesList.SelectedItems[0].ToString().Split(' ')[0];
-                String itemFirm = medicinesList.SelectedItems[0].ToString().Split(' ')[1];
-                if (item.Name == itemName && item.Firm.Name == itemFirm)
+                if (item.Name == medicinesList.SelectedItems[0])
                 {
                     medicinesToSave.Add(item);
                     medicinesList.Items.Remove(medicinesList.SelectedItems[0]);
@@ -95,17 +93,17 @@ namespace pharmacies.controller.admin.Create
             Pharmacy pharmacy = new Pharmacy();
             pharmacy.Address = address.Text;
             pharmacy.Name = name.Text;
+            pharmacyService.savePharmacy(pharmacy);
             if (medicinesToSave != null)
             {
                 foreach (var item in medicinesToSave)
                 {
                     PharmacyMedicine pharmacyMedicine = new PharmacyMedicine();
-                    pharmacyMedicine.Medicine = item;
-                    pharmacyMedicine.Pharmacy = pharmacy;
+                    pharmacyMedicine.MedicineId = item.Id ;
+                    pharmacyMedicine.PharmacyId = pharmacy.Id;
                     pharmacyMedicineService.savePharmacyMedicine(pharmacyMedicine);
                 }
             }
-            pharmacyService.savePharmacy(pharmacy);
             Close();
         }
 

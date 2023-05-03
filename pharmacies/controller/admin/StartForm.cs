@@ -50,6 +50,18 @@ namespace pharmacies.controller.admin
                 CreateMedicineForm form = new CreateMedicineForm();
                 form.ShowDialog();
             }
+
+            if (Login.Session.TableForAdmin == "Фирмы")
+            {
+                CreateFirmForm form = new CreateFirmForm();
+                form.ShowDialog();
+            }
+
+            if (Login.Session.TableForAdmin == "Скидки")
+            {
+                CreateDiscountForm form = new CreateDiscountForm();
+                form.ShowDialog();
+            }
         }
 
         private void table_SelectedIndexChanged(object sender, EventArgs e)

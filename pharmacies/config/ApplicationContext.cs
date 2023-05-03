@@ -39,6 +39,7 @@ namespace pharmacies.config
                 .WithOne(u => u.Medicine)
                 .HasForeignKey<Discount>(u => u.Id);
 
+
             modelBuilder.Entity<PharmacyMedicine>().HasKey(sc => new { sc.MedicineId, sc.PharmacyId });
 
             modelBuilder.Entity<PharmacyMedicine>()

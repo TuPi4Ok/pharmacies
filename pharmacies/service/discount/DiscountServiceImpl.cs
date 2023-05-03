@@ -12,6 +12,11 @@ namespace pharmacies.service.discount
     {
         DiscountRepository discountRepository = new DiscountRepository();
 
+        public List<Discount> getAll()
+        {
+            return discountRepository.findAllDiscounts();
+        }
+
         public bool saveDiscount(Discount discount)
         {
             discountRepository.save(discount);
