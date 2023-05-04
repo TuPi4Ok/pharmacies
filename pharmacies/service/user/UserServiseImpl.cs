@@ -22,10 +22,23 @@ namespace pharmacies.service
             return true;
         }
 
-        public bool validate(User user)
+        public User getUser(String userName)
         {
-            User existingUser = userRepository.findUserByUserName(user.UserName);
-            if (existingUser != null && existingUser.Password == user.Password)
+            try
+            {
+                return userRepository.findUserByUserName(userName);
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
+
+        public bool validate(User existingUser, User userForValidate)
+        {
+            
+            if (existingUser != null && existingUser.Password == userForValidate.Password)
             {
                 return true;
             }

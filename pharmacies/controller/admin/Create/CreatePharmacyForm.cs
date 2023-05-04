@@ -39,6 +39,10 @@ namespace pharmacies.controller.admin.Create
 
             save.Enabled = false;
             addMedicins.Enabled = false;
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void saveEnable()

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using pharmacies.config;
 using pharmacies.model;
+using Remotion.Linq.Clauses.ExpressionVisitors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,17 @@ namespace pharmacies.repository
         public void save(Discount discount)
         {
             db.Discounts.Add(discount);
+            db.SaveChanges();
+        }
+
+        public Discount findDiscountById(int id)
+        {
+            return db.Discounts.Where(p => p.Id == id).First();
+        }
+
+        public void delete(Discount discount)
+        {
+            db.Discounts.Remove(discount);
             db.SaveChanges();
         }
 

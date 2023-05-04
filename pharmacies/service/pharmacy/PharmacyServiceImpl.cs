@@ -22,5 +22,28 @@ namespace pharmacies.service.pharmacy
         {
             return pharmacyRepository.findAllPharmacies();
         }
+
+        public bool deletePharmacy(int id)
+        {
+            try
+            {
+                pharmacyRepository.delete(pharmacyRepository.findPharmacyById(id));
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public List<Pharmacy> WhereCanBuy(String medicine)
+        {
+            return pharmacyRepository.findPharmasyByMedicine(medicine);
+        }
+
+        public List<Pharmacy> WhereCanBuyCost(string medicine)
+        {
+            return pharmacyRepository.findPharmasyByMedicineCost(medicine);
+        }
     }
 }

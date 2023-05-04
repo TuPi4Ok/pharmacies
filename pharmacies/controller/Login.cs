@@ -26,6 +26,9 @@ namespace pharmacies
         {
             InitializeComponent();
             Loging.Enabled = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void LoginEnable()
@@ -43,13 +46,16 @@ namespace pharmacies
         private void button1_Click(object sender, EventArgs e)
         {
             User user = new User(userNameField.Text, passwordField.Text);
-            if(userServise.validate(user))
+            User existingUser = userServise.getUser(userNameField.Text);
+            if(userServise.validate(existingUser, user))
             {
-                Session.setSession(user, this);
+                Session.setSession(existingUser, this);
             }
             else
             {
                 MessageBox.Show("Неверное имя пользователя или пароль!");
+                userNameField.Text = "";
+                passwordField.Text = "";
                 return;
             }
 
@@ -70,6 +76,8 @@ namespace pharmacies
         {
             RegistrationForm registration = new RegistrationForm();
             registration.Show();
+            Session.FormLogin = this;
+            this.Visible = false;
         }
 
         private void userNameField_TextChanged(object sender, EventArgs e)

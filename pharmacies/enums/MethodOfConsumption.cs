@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pharmacies.enums
 {
-    enum MethodOfConsumption
+    public enum MethodOfConsumption
     {
         throughTheMmouth,
         intravenously,

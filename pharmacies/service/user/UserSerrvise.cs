@@ -9,7 +9,9 @@ namespace pharmacies.service
 {
     interface UserSerrvise
     {
-        bool validate(User user);
+        bool validate(User existingUser,User user);
         bool saveUser(User user);
+
+        User getUser(String userName);
     }
 }

@@ -12,5 +12,7 @@ namespace pharmacies.service.discount
         bool saveDiscount(Discount discount);
 
         List<Discount> getAll();
+
+        bool deleteDiscount(int id);
     }
 }

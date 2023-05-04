@@ -39,6 +39,10 @@ namespace pharmacies.controller.admin.Create
             setPharmacyList();
             addMedicins.Enabled = false;
             save.Enabled = false;
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void setPharmacyList()
@@ -83,7 +87,7 @@ namespace pharmacies.controller.admin.Create
 
         private void saveEnable()
         {
-            if (name.Text.Length > 0 && cost.Text.Length > 0 && typeOfPackaging.Text.Length > 0 && methodOfConsumption.Text.Length > 0 && firmBox.Text.Length > 0)
+            if (name.Text.Length > 0 && cost.Text.Length > 0 && typeOfPackaging.Text.Length > 0 && methodOfConsumption.Text.Length > 0 && firmBox.Text.Length > 0 && contraindications.Text.Length > 0)
             {
                 save.Enabled = true;
             }
@@ -118,28 +122,30 @@ namespace pharmacies.controller.admin.Create
             medicine.MethodOfConsumption = Medicine.getMethodOfConsumption(methodOfConsumption.Text);
             medicine.Cost = Convert.ToInt32(cost.Text);
             medicine.BestBeforeDate = bestBeforeDate.Value;
+            medicine.Contraindications = contraindications.Text;
+            
 
             List<Firm> allFirrms = firmService.getAll();
             foreach (var item in allFirrms)
             {
                 if(item.Name == firmBox.Text)
                 {
-                    medicine.Firm = item;
+                    medicine.FirmId = item.Id;
                 }
             }
 
-            //List <PharmacyMedicine> pharmacyMedicines = new List<PharmacyMedicine>();
-            //if (PharmaciesToSave != null)
-            //{
-            //    foreach (var item in PharmaciesToSave)
-            //    {
-            //        PharmacyMedicine pharmacyMedicine = new PharmacyMedicine();
-            //        pharmacyMedicine.MedicineId = medicine.Id;
-            //        pharmacyMedicine.PharmacyId = item.Id;
-            //        pharmacyMedicines.Add(pharmacyMedicine);
-            //    }
-            //}
-            //medicine.PharmacyMedicine = pharmacyMedicines;
+            List<PharmacyMedicine> pharmacyMedicines = new List<PharmacyMedicine>();
+            if (PharmaciesToSave != null)
+            {
+                foreach (var item in PharmaciesToSave)
+                {
+                    PharmacyMedicine pharmacyMedicine = new PharmacyMedicine();
+                    pharmacyMedicine.MedicineId = medicine.Id;
+                    pharmacyMedicine.PharmacyId = item.Id;
+                    pharmacyMedicines.Add(pharmacyMedicine);
+                }
+            }
+            medicine.PharmacyMedicine = pharmacyMedicines;
             medicineService.saveMedicine(medicine);
             Close();
         }
@@ -204,6 +210,11 @@ namespace pharmacies.controller.admin.Create
                     PharmacyList.Items.Remove(PharmacyList.SelectedItems[0]);
                 }
             }
+        }
+
+        private void contraindications_TextChanged(object sender, EventArgs e)
+        {
+            saveEnable();
         }
     }
 }

@@ -11,6 +11,8 @@ namespace pharmacies.service.pharmacy
     {
         bool savePharmacy(Pharmacy pharmacy);
         List<Pharmacy> getAll();
-
+        bool deletePharmacy(int id);
+        List<Pharmacy> WhereCanBuy(String medicine);
+        List<Pharmacy> WhereCanBuyCost(String medicine);
     }
 }

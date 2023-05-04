@@ -19,6 +19,12 @@ namespace pharmacies.controller.admin.Create
         public CreateFirmForm()
         {
             InitializeComponent();
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+
+            save.Enabled = false;
         }
 
         private void saveEnable()

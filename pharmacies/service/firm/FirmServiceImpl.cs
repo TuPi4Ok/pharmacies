@@ -26,5 +26,18 @@ namespace pharmacies.service.firm
         {
             return firmRepository.findAllFirms();
         }
+
+        public bool deleteFirm(int id)
+        {
+            try
+            {
+                firmRepository.delete(firmRepository.findFirmById(id));
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

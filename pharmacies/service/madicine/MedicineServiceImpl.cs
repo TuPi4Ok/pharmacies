@@ -22,5 +22,18 @@ namespace pharmacies.service.madicine
         {
             return medicineRepository.findAllMedicines();
         }
+
+        public bool deleteMedicine(int id)
+        {
+            try
+            {
+                medicineRepository.delete(medicineRepository.findMedicineById(id));
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

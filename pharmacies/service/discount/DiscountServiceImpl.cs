@@ -12,6 +12,19 @@ namespace pharmacies.service.discount
     {
         DiscountRepository discountRepository = new DiscountRepository();
 
+        public bool deleteDiscount(int id)
+        {
+            try
+            {
+                discountRepository.delete(discountRepository.findDiscountById(id));
+                return true;
+            } 
+            catch 
+            {
+                return false;
+            }
+        }
+
         public List<Discount> getAll()
         {
             return discountRepository.findAllDiscounts();

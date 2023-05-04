@@ -31,6 +31,19 @@ namespace pharmacies.repository
                 return null;
             }
         }
+
+        public Firm findFirmById(int id)
+        {
+            return db.Firms.Where(p => p.Id == id).First();
+        }
+
+        public void delete(Firm firm)
+        {
+            db.Firms.Remove(firm);
+            db.SaveChanges();
+        }
+
+
         public List<Firm> findAllFirms()
         {
             return db.Firms.Include(c => c.Medicines).ToList();

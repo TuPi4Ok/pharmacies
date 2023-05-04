@@ -13,6 +13,7 @@ namespace pharmacies.config
         private User currentUser;
         private Login formLogin;
         private String tableForAdmin;
+        private String tableForDelete;
 
         public Session(bool valid)
         {
@@ -23,6 +24,7 @@ namespace pharmacies.config
         public User CurrentUser { get => currentUser; set => currentUser = value; }
         public Login FormLogin { get => formLogin; set => formLogin = value; }
         public string TableForAdmin { get => tableForAdmin; set => tableForAdmin = value; }
+        public string TableForDelete { get => tableForDelete; set => tableForDelete = value; }
 
         public void setSession(User user, Login login)
         {

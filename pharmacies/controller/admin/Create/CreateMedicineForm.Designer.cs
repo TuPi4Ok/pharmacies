@@ -46,11 +46,15 @@
             this.name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.contraindications = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.contraindications);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.methodOfConsumption);
             this.groupBox1.Controls.Add(this.typeOfPackaging);
             this.groupBox1.Controls.Add(this.bestBeforeDate);
@@ -69,7 +73,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(11, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(405, 249);
+            this.groupBox1.Size = new System.Drawing.Size(405, 276);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Введите данные";
@@ -96,7 +100,7 @@
             // 
             // bestBeforeDate
             // 
-            this.bestBeforeDate.Location = new System.Drawing.Point(121, 144);
+            this.bestBeforeDate.Location = new System.Drawing.Point(121, 174);
             this.bestBeforeDate.Name = "bestBeforeDate";
             this.bestBeforeDate.Size = new System.Drawing.Size(107, 20);
             this.bestBeforeDate.TabIndex = 19;
@@ -113,7 +117,7 @@
             // firmBox
             // 
             this.firmBox.FormattingEnabled = true;
-            this.firmBox.Location = new System.Drawing.Point(122, 118);
+            this.firmBox.Location = new System.Drawing.Point(122, 148);
             this.firmBox.Name = "firmBox";
             this.firmBox.Size = new System.Drawing.Size(106, 21);
             this.firmBox.TabIndex = 12;
@@ -123,7 +127,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 126);
+            this.label9.Location = new System.Drawing.Point(6, 156);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 13);
             this.label9.TabIndex = 11;
@@ -151,7 +155,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 150);
+            this.label6.Location = new System.Drawing.Point(6, 180);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 13);
             this.label6.TabIndex = 8;
@@ -187,7 +191,7 @@
             // 
             // save
             // 
-            this.save.Location = new System.Drawing.Point(9, 192);
+            this.save.Location = new System.Drawing.Point(9, 221);
             this.save.Name = "save";
             this.save.Size = new System.Drawing.Size(381, 32);
             this.save.TabIndex = 5;
@@ -232,11 +236,28 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Лекарство";
             // 
+            // contraindications
+            // 
+            this.contraindications.Location = new System.Drawing.Point(121, 122);
+            this.contraindications.Name = "contraindications";
+            this.contraindications.Size = new System.Drawing.Size(107, 20);
+            this.contraindications.TabIndex = 23;
+            this.contraindications.TextChanged += new System.EventHandler(this.contraindications_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 129);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 13);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Противопоказания";
+            // 
             // CreateMedicineForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 315);
+            this.ClientSize = new System.Drawing.Size(437, 360);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "CreateMedicineForm";
@@ -268,5 +289,7 @@
         private System.Windows.Forms.DateTimePicker bestBeforeDate;
         private System.Windows.Forms.ComboBox methodOfConsumption;
         private System.Windows.Forms.ComboBox typeOfPackaging;
+        private System.Windows.Forms.TextBox contraindications;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -25,6 +25,10 @@ namespace pharmacies.controller
             roleField.Items.Add("Фармоцевт");
             roleField.Items.Add("Покупатель");
             registration.Enabled = false;
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void registrationEnable()
@@ -85,6 +89,11 @@ namespace pharmacies.controller
             {
                 MessageBox.Show("Пользователь с таким именем уже существует!");
             }
+        }
+
+        private void RegistrationForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Login.Session.FormLogin.Visible = true;
         }
     }
 }

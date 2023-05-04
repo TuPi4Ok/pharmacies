@@ -11,5 +11,6 @@ namespace pharmacies.service.madicine
     {
         bool saveMedicine(Medicine medicine);
         List<Medicine> getAll();
+        bool deleteMedicine(int id);
     }
 }

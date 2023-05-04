@@ -13,5 +13,7 @@ namespace pharmacies.service.firm
         bool saveFirm(Firm firm);
 
         List<Firm> getAll();
+
+        bool deleteFirm(int id);
     }
 }

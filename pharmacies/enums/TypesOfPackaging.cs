@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace pharmacies.enums
 {
-    enum TypesOfPackaging
+    public enum TypesOfPackaging
     {
         Primary,
         Secondary,

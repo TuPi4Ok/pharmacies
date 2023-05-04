@@ -1,4 +1,6 @@
 ﻿using pharmacies.controller.admin.Create;
+using pharmacies.controller.admin.Delete;
+using pharmacies.controller.admin.Read;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,12 +24,15 @@ namespace pharmacies.controller.admin
             table.Items.Add("Лекарства");
             table.Items.Add("Фирмы");
             table.Items.Add("Скидки");
-            table.Items.Add("Пользователи");
 
             Create.Enabled = false;
             Read.Enabled = false;
             Update.Enabled = false;
             Delete.Enabled = false;
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
 
         private void StartForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -85,6 +90,47 @@ namespace pharmacies.controller.admin
         private void table_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.KeyChar = '\0';
+        }
+
+        private void Read_Click(object sender, EventArgs e)
+        {
+            Login.Session.TableForAdmin = table.Text;
+
+            if (Login.Session.TableForAdmin == "Аптеки")
+            {
+                ReadPharmacyForm form = new ReadPharmacyForm();
+                form.ShowDialog();
+            }
+
+            if (Login.Session.TableForAdmin == "Лекарства")
+            {
+                ReadMedicineForm form = new ReadMedicineForm();
+                form.ShowDialog();
+            }
+
+            if (Login.Session.TableForAdmin == "Фирмы")
+            {
+                ReadFirmForm form = new ReadFirmForm();
+                form.ShowDialog();
+            }
+
+            if (Login.Session.TableForAdmin == "Скидки")
+            {
+                ReadDiscountForm form = new ReadDiscountForm();
+                form.ShowDialog();
+            }
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            Login.Session.TableForDelete = table.Text;
+            DeleteForm form = new DeleteForm();
+            form.ShowDialog();
+        }
+
+        private void wellcome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
