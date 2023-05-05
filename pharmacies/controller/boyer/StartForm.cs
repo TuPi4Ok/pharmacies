@@ -29,11 +29,7 @@ namespace pharmacies.controller.boyer
             {
                 foreach (var medicine in allMedicines)
                 {
-                    if (medicine.Discount == null)
-                    {
-                        medicineBox.Items.Add(medicine.Name);
-                    }
-
+                    medicineBox.Items.Add(medicine.Name);
                 }
             }
 
@@ -103,6 +99,11 @@ namespace pharmacies.controller.boyer
             {
                 MessageBox.Show("Ничего не найдено");
             }
+        }
+
+        private void StartForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Login.Session.FormLogin.Visible = true;
         }
     }
 }

@@ -30,8 +30,8 @@
         {
             this.wellcome = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.WhereCanBuy = new System.Windows.Forms.Button();
             this.WhereCanBuyCost = new System.Windows.Forms.Button();
+            this.WhereCanBuy = new System.Windows.Forms.Button();
             this.medicineBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -59,17 +59,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Выбирите действие";
             // 
-            // WhereCanBuy
-            // 
-            this.WhereCanBuy.Location = new System.Drawing.Point(7, 20);
-            this.WhereCanBuy.Name = "WhereCanBuy";
-            this.WhereCanBuy.Size = new System.Drawing.Size(268, 44);
-            this.WhereCanBuy.TabIndex = 0;
-            this.WhereCanBuy.Text = "По названию лекарства определить, где его можно купить";
-            this.WhereCanBuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.WhereCanBuy.UseVisualStyleBackColor = true;
-            this.WhereCanBuy.Click += new System.EventHandler(this.WhereCanBuy_Click);
-            // 
             // WhereCanBuyCost
             // 
             this.WhereCanBuyCost.Location = new System.Drawing.Point(7, 70);
@@ -80,6 +69,17 @@
     "";
             this.WhereCanBuyCost.UseVisualStyleBackColor = true;
             this.WhereCanBuyCost.Click += new System.EventHandler(this.WhereCanBuyCost_Click);
+            // 
+            // WhereCanBuy
+            // 
+            this.WhereCanBuy.Location = new System.Drawing.Point(7, 20);
+            this.WhereCanBuy.Name = "WhereCanBuy";
+            this.WhereCanBuy.Size = new System.Drawing.Size(268, 44);
+            this.WhereCanBuy.TabIndex = 0;
+            this.WhereCanBuy.Text = "По названию лекарства определить, где его можно купить";
+            this.WhereCanBuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.WhereCanBuy.UseVisualStyleBackColor = true;
+            this.WhereCanBuy.Click += new System.EventHandler(this.WhereCanBuy_Click);
             // 
             // medicineBox
             // 
@@ -111,6 +111,7 @@
             this.Controls.Add(this.wellcome);
             this.Name = "StartForm";
             this.Text = "StartForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StartForm_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
