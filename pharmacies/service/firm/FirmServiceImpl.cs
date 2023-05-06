@@ -39,5 +39,10 @@ namespace pharmacies.service.firm
                 return false;
             }
         }
+
+        public Firm getFirmByName(string name)
+        {
+            return firmRepository.findFirmByName(name);
+        }
     }
 }

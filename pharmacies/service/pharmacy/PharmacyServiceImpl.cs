@@ -45,5 +45,10 @@ namespace pharmacies.service.pharmacy
         {
             return pharmacyRepository.findPharmasyByMedicineCost(medicine);
         }
+
+        public Pharmacy getPharmacyByName(string name)
+        {
+            return pharmacyRepository.findPharmacyByName(name);
+        }
     }
 }

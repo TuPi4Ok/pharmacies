@@ -20,6 +20,11 @@ namespace pharmacies.repository
             db.SaveChanges();
         }
 
+        public Pharmacy findPharmacyByName(string name)
+        {
+            return db.Pharmacys.Include(p => p.PharmacyMedicine).Where(p => p.Name == name).FirstOrDefault();
+        }
+
         public Pharmacy findPharmacyById(int id)
         {
             return db.Pharmacys.Where(p => p.Id == id).First();
@@ -50,6 +55,8 @@ namespace pharmacies.repository
                     where medicine1 == medicine.Name && medicine.BestBeforeDate > DateTime.Now
                     select pharmasy).ToList();
         }
+
+        
 
         public List<Pharmacy> findAllPharmacies()
         {

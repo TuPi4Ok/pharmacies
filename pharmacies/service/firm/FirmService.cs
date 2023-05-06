@@ -15,5 +15,6 @@ namespace pharmacies.service.firm
         List<Firm> getAll();
 
         bool deleteFirm(int id);
+        Firm getFirmByName(String name);
     }
 }

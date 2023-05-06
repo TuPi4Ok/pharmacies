@@ -35,5 +35,15 @@ namespace pharmacies.service.madicine
                 return false;
             }
         }
+
+        public List<Medicine> postingThisMonth(Pharmacy pharmacy)
+        {
+            return medicineRepository.findMedicineByBestBeforeDate(pharmacy);
+        }
+
+        public List<Medicine> getMedicinesByFirmAndPharmacy(Pharmacy pharmacy, Firm firm)
+        {
+            return medicineRepository.findMedicineByFirmInPharmacy(pharmacy, firm);
+        }
     }
 }

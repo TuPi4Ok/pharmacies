@@ -1,5 +1,6 @@
 ﻿using pharmacies.config;
 using pharmacies.controller;
+using pharmacies.controller.pharmacist;
 using pharmacies.enums;
 using pharmacies.model;
 using pharmacies.service;
@@ -67,6 +68,11 @@ namespace pharmacies
             if (Session.CurrentUser.Role == Role.ADMIN)
             {
                 controller.admin.StartForm startForm = new controller.admin.StartForm();
+                startForm.Show();
+            }
+            if (Session.CurrentUser.Role == Role.PHARMACIST)
+            {
+                StartForm startForm = new StartForm();
                 startForm.Show();
             }
             this.Visible = false;

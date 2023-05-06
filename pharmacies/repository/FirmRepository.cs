@@ -24,7 +24,7 @@ namespace pharmacies.repository
         {
             try
             {
-                return db.Firms.Where(p => p.Name == name).ToList().First();
+                return db.Firms.Where(p => p.Name == name).Include(p => p.Medicines).First();
             }
             catch
             {

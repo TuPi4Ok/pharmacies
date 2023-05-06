@@ -235,10 +235,10 @@
     <Compile Include="controller\admin\StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="controller\boyer\StartForm.cs">
+    <Compile Include="controller\buyer\StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controller\boyer\StartForm.Designer.cs">
+    <Compile Include="controller\buyer\StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="controller\Login.cs">
@@ -246,6 +246,12 @@
     </Compile>
     <Compile Include="controller\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controller\pharmacist\StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controller\pharmacist\StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="controller\RegistrationForm.cs">
       <SubType>Form</SubType>
@@ -312,11 +318,14 @@
     <EmbeddedResource Include="controller\admin\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controller\boyer\StartForm.resx">
+    <EmbeddedResource Include="controller\buyer\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controller\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controller\pharmacist\StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controller\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
@@ -344,8 +353,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controller\pharmacist\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

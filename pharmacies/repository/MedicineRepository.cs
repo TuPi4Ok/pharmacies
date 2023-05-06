@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions.Internal;
 using pharmacies.config;
 using pharmacies.model;
 using Remotion.Linq.Clauses.ExpressionVisitors;
@@ -30,6 +31,25 @@ namespace pharmacies.repository
         {
             db.Medicines.Remove(medicine);
             db.SaveChanges();
+        }
+
+        public List<Medicine> findMedicineByBestBeforeDate(Pharmacy pharmacy1)
+        {
+            return (from medicine in db.Medicines
+                   join pharmacyMedicine in db.PharmacyMedicines on medicine.Id equals pharmacyMedicine.MedicineId
+                   join pharmacy in db.Pharmacys on pharmacyMedicine.PharmacyId equals pharmacy.Id
+                   where pharmacy.Id == pharmacy1.Id && medicine.BestBeforeDate.Month == DateTime.Now.Month
+                   select medicine).ToList();
+        }
+
+        public List<Medicine> findMedicineByFirmInPharmacy(Pharmacy pharmacy1, Firm firm1)
+        {
+            return (from medicine in db.Medicines
+                    join firm in db.Firms on medicine.FirmId equals firm.Id
+                    join pharmacyMedicine in db.PharmacyMedicines on medicine.Id equals pharmacyMedicine.MedicineId
+                    join pharmacy in db.Pharmacys on pharmacyMedicine.PharmacyId equals pharmacy.Id
+                    where pharmacy.Id == pharmacy1.Id && medicine.BestBeforeDate > DateTime.Now && firm.Id == firm1.Id
+                    select medicine).ToList();
         }
 
         public List<Medicine> findAllMedicines()
