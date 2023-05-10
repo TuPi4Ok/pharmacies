@@ -23,6 +23,7 @@ namespace pharmacies.controller.admin.Read
             this.MinimizeBox = false;
 
             dataGridView1.ColumnCount = 3;
+            dataGridView1.RowCount = discountService.getAll().Count;
             dataGridView1.Columns[0].Name = "ID";
             dataGridView1.Columns[1].Name = "Процент";
             dataGridView1.Columns[2].Name = "Лекарство";

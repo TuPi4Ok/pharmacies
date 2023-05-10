@@ -14,5 +14,9 @@ namespace pharmacies.service.discount
         List<Discount> getAll();
 
         bool deleteDiscount(int id);
+
+        void updateDiscount(Discount discount);
+
+        Discount getDiscountById(int id);
     }
 }

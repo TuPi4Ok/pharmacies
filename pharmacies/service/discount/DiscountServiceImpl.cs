@@ -30,10 +30,27 @@ namespace pharmacies.service.discount
             return discountRepository.findAllDiscounts();
         }
 
+        public Discount getDiscountById(int id)
+        {
+            try
+            {
+                return discountRepository.findDiscountById(id);
+            } 
+            catch
+            {
+                return null;
+            }
+        }
+
         public bool saveDiscount(Discount discount)
         {
             discountRepository.save(discount);
             return true;
+        }
+
+        public void updateDiscount(Discount discount)
+        {
+            discountRepository.update(discount);
         }
     }
 }

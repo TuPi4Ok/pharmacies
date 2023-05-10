@@ -1,4 +1,5 @@
-﻿using pharmacies.service.madicine;
+﻿using pharmacies.service.discount;
+using pharmacies.service.madicine;
 using pharmacies.service.pharmacy;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,7 @@ namespace pharmacies.controller.admin.Read
             this.MinimizeBox = false;
 
             dataGridView1.ColumnCount = 3;
+            dataGridView1.RowCount = pharmacyService.getAll().Count;
             dataGridView1.Columns[0].Name = "ID";
             dataGridView1.Columns[1].Name = "Наименование";
             dataGridView1.Columns[2].Name = "Адрес";

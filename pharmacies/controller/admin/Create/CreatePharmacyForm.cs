@@ -77,10 +77,10 @@ namespace pharmacies.controller.admin.Create
         {
             foreach(var item in allMedicines)
             {
-                if (item.Name == medicinesList.SelectedItems[0])
+                if (item.Name == medicinesList.SelectedItem.ToString())
                 {
                     medicinesToSave.Add(item);
-                    medicinesList.Items.Remove(medicinesList.SelectedItems[0]);
+                    medicinesList.Items.Remove(medicinesList.SelectedItem);
                 }
             }
            

@@ -44,5 +44,10 @@ namespace pharmacies.service.firm
         {
             return firmRepository.findFirmByName(name);
         }
+
+        public void updateFirm(Firm firm)
+        {
+            firmRepository.update(firm);
+        }
     }
 }

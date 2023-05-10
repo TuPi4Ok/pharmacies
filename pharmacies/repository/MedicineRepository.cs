@@ -26,6 +26,10 @@ namespace pharmacies.repository
         {
             return db.Medicines.Where(p => p.Id == id).First();
         }
+        public Medicine findMedicineByName(String name)
+        {
+            return db.Medicines.Where(p => p.Name == name).First();
+        }
 
         public void delete(Medicine medicine)
         {
@@ -59,6 +63,12 @@ namespace pharmacies.repository
                 return db.Medicines.Include(c => c.Discount).Include(c => c.Firm).Include(c => c.PharmacyMedicine).ToList();
             } catch { return null; }
             
+        }
+
+        public void update(Medicine medicine)
+        {
+            db.Medicines.Update(medicine);
+            db.SaveChanges();
         }
     }
 }

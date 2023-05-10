@@ -62,5 +62,11 @@ namespace pharmacies.repository
         {
             return db.Pharmacys.Include(c => c.PharmacyMedicine).ToList();
         }
+
+        public void update(Pharmacy pharmacy)
+        {
+            db.Pharmacys.Update(pharmacy);
+            db.SaveChanges();
+        }
     }
 }

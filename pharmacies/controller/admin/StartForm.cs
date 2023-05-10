@@ -1,6 +1,7 @@
 ﻿using pharmacies.controller.admin.Create;
 using pharmacies.controller.admin.Delete;
 using pharmacies.controller.admin.Read;
+using pharmacies.controller.admin.Update;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -131,6 +132,35 @@ namespace pharmacies.controller.admin
         private void wellcome_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Update_Click(object sender, EventArgs e)
+        {
+            Login.Session.TableForAdmin = table.Text;
+
+            if (Login.Session.TableForAdmin == "Аптеки")
+            {
+                UpdatePharmacyForm form = new UpdatePharmacyForm();
+                form.ShowDialog();
+            }
+
+            if (Login.Session.TableForAdmin == "Лекарства")
+            {
+                UpdateMedicineForm form = new UpdateMedicineForm();
+                form.ShowDialog();
+            }
+
+            if (Login.Session.TableForAdmin == "Фирмы")
+            {
+                UpdateFirmForm form = new UpdateFirmForm();
+                form.ShowDialog();
+            }
+
+            if (Login.Session.TableForAdmin == "Скидки")
+            {
+                UpdateDiscountForm form = new UpdateDiscountForm();
+                form.ShowDialog();
+            }
         }
     }
 }

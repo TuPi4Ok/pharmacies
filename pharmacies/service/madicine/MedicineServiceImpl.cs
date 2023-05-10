@@ -45,5 +45,15 @@ namespace pharmacies.service.madicine
         {
             return medicineRepository.findMedicineByFirmInPharmacy(pharmacy, firm);
         }
+
+        public void updateMedicine(Medicine medicine)
+        {
+            medicineRepository.update(medicine);
+        }
+
+        public Medicine getMedicineByName(string name)
+        {
+            return medicineRepository.findMedicineByName(name);
+        }
     }
 }

@@ -82,6 +82,7 @@
             this.Update.TabIndex = 2;
             this.Update.Text = "Изменить запись";
             this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
             // 
             // Read
             // 

@@ -235,6 +235,30 @@
     <Compile Include="controller\admin\StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="controller\admin\Update\UpdateDiscountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controller\admin\Update\UpdateDiscountForm.Designer.cs">
+      <DependentUpon>UpdateDiscountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controller\admin\Update\UpdateFirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controller\admin\Update\UpdateFirmForm.Designer.cs">
+      <DependentUpon>UpdateFirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controller\admin\Update\UpdateMedicineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controller\admin\Update\UpdateMedicineForm.Designer.cs">
+      <DependentUpon>UpdateMedicineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controller\admin\Update\UpdatePharmacyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controller\admin\Update\UpdatePharmacyForm.Designer.cs">
+      <DependentUpon>UpdatePharmacyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="controller\buyer\StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +341,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controller\admin\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controller\admin\Update\UpdateDiscountForm.resx">
+      <DependentUpon>UpdateDiscountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controller\admin\Update\UpdateFirmForm.resx">
+      <DependentUpon>UpdateFirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controller\admin\Update\UpdateMedicineForm.resx">
+      <DependentUpon>UpdateMedicineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controller\admin\Update\UpdatePharmacyForm.resx">
+      <DependentUpon>UpdatePharmacyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controller\buyer\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>

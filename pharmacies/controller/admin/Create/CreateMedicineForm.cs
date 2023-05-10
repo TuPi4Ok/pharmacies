@@ -204,10 +204,10 @@ namespace pharmacies.controller.admin.Create
         {
             foreach (var item in allPharmacies)
             {
-                if(item.Name == PharmacyList.SelectedItems[0].ToString())
+                if(item.Name == PharmacyList.SelectedItem.ToString())
                 {
                     PharmaciesToSave.Add(item);
-                    PharmacyList.Items.Remove(PharmacyList.SelectedItems[0]);
+                    PharmacyList.Items.Remove(PharmacyList.SelectedItem);
                 }
             }
         }

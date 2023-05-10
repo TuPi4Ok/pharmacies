@@ -36,5 +36,11 @@ namespace pharmacies.repository
         {
             return db.Discounts.Include(c => c.Medicine).ToList();
         }
+
+        public void update(Discount discount)
+        {
+            db.Discounts.Update(discount);
+            db.SaveChanges();
+        }
     }
 }

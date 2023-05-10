@@ -14,5 +14,7 @@ namespace pharmacies.service.madicine
         bool deleteMedicine(int id);
         List<Medicine> postingThisMonth(Pharmacy pharmacy);
         List<Medicine> getMedicinesByFirmAndPharmacy(Pharmacy pharmacy, Firm firm);
+        void updateMedicine(Medicine medicine);
+        Medicine getMedicineByName(String name);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using pharmacies.model;
@@ -49,6 +50,11 @@ namespace pharmacies.service.pharmacy
         public Pharmacy getPharmacyByName(string name)
         {
             return pharmacyRepository.findPharmacyByName(name);
+        }
+
+        public void updatePharmacy(Pharmacy pharmacy)
+        {
+            pharmacyRepository.update(pharmacy); 
         }
     }
 }
