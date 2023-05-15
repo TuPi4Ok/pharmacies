@@ -91,7 +91,7 @@ namespace pharmacies.controller.boyer
             {
                 result += pharmasy.Name + " " + pharmasy.Address + "\n";
             }
-            if (result != "Результат: ")
+            if (result != "Результат(по возрастанию цены):\n")
             {
                 MessageBox.Show(result);
             }

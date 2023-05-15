@@ -13,4 +13,12 @@ namespace pharmacies.enums
         group,
         Tertiary
     }
+
+    public enum CopyOfTypesOfPackaging
+    {
+        Primary,
+        Secondary,
+        group,
+        Tertiary
+    }
 }

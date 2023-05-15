@@ -37,11 +37,11 @@
             this.PostingThisMonth = new System.Windows.Forms.Button();
             this.firmButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pharmacyBox = new System.Windows.Forms.ComboBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.firmBox = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pharmacyBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -54,7 +54,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Выбирите лекарство";
+            this.label1.Text = "Выберите лекарство";
             // 
             // medicineBox
             // 
@@ -145,35 +145,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Выбирите действие";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(302, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Выбирите аптеку";
-            // 
-            // pharmacyBox
-            // 
-            this.pharmacyBox.FormattingEnabled = true;
-            this.pharmacyBox.Location = new System.Drawing.Point(402, 47);
-            this.pharmacyBox.Name = "pharmacyBox";
-            this.pharmacyBox.Size = new System.Drawing.Size(175, 21);
-            this.pharmacyBox.TabIndex = 9;
-            this.pharmacyBox.SelectedIndexChanged += new System.EventHandler(this.pharmacyBox_SelectedIndexChanged);
-            this.pharmacyBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pharmacyBox_KeyPress);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.firmButton);
-            this.groupBox3.Location = new System.Drawing.Point(7, 93);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(281, 71);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Выбирите действие";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -192,6 +163,35 @@
             this.firmBox.TabIndex = 11;
             this.firmBox.SelectedIndexChanged += new System.EventHandler(this.firmBox_SelectedIndexChanged);
             this.firmBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.firmBox_KeyPress);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.firmButton);
+            this.groupBox3.Location = new System.Drawing.Point(7, 93);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(281, 71);
+            this.groupBox3.TabIndex = 8;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Выбирите действие";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(302, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Выберите аптеку";
+            // 
+            // pharmacyBox
+            // 
+            this.pharmacyBox.FormattingEnabled = true;
+            this.pharmacyBox.Location = new System.Drawing.Point(402, 47);
+            this.pharmacyBox.Name = "pharmacyBox";
+            this.pharmacyBox.Size = new System.Drawing.Size(175, 21);
+            this.pharmacyBox.TabIndex = 9;
+            this.pharmacyBox.SelectedIndexChanged += new System.EventHandler(this.pharmacyBox_SelectedIndexChanged);
+            this.pharmacyBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pharmacyBox_KeyPress);
             // 
             // StartForm
             // 

@@ -42,7 +42,7 @@ namespace pharmacies.repository
             return (from medicine in db.Medicines
                    join pharmacyMedicine in db.PharmacyMedicines on medicine.Id equals pharmacyMedicine.MedicineId
                    join pharmacy in db.Pharmacys on pharmacyMedicine.PharmacyId equals pharmacy.Id
-                   where pharmacy.Id == pharmacy1.Id && medicine.BestBeforeDate.Month == DateTime.Now.Month
+                   where pharmacy.Id == pharmacy1.Id && medicine.BestBeforeDate.Month == DateTime.Now.Month && medicine.BestBeforeDate.Year == DateTime.Now.Year
                    select medicine).ToList();
         }
 

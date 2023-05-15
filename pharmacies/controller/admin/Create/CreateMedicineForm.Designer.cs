@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.contraindications = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.methodOfConsumption = new System.Windows.Forms.ComboBox();
             this.typeOfPackaging = new System.Windows.Forms.ComboBox();
             this.bestBeforeDate = new System.Windows.Forms.DateTimePicker();
@@ -46,8 +48,6 @@
             this.name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.contraindications = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,23 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Введите данные";
+            // 
+            // contraindications
+            // 
+            this.contraindications.Location = new System.Drawing.Point(121, 122);
+            this.contraindications.Name = "contraindications";
+            this.contraindications.Size = new System.Drawing.Size(107, 20);
+            this.contraindications.TabIndex = 23;
+            this.contraindications.TextChanged += new System.EventHandler(this.contraindications_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 129);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 13);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Противопоказания";
             // 
             // methodOfConsumption
             // 
@@ -235,23 +252,6 @@
             this.label1.Size = new System.Drawing.Size(156, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "Лекарство";
-            // 
-            // contraindications
-            // 
-            this.contraindications.Location = new System.Drawing.Point(121, 122);
-            this.contraindications.Name = "contraindications";
-            this.contraindications.Size = new System.Drawing.Size(107, 20);
-            this.contraindications.TabIndex = 23;
-            this.contraindications.TextChanged += new System.EventHandler(this.contraindications_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 129);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 13);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Противопоказания";
             // 
             // CreateMedicineForm
             // 

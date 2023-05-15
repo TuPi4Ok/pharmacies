@@ -3,6 +3,7 @@ using pharmacies.service.madicine;
 using pharmacies.service.pharmacy;
 using pharmacies.service.pharmacyMedicine;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -75,9 +76,10 @@ namespace pharmacies.controller.admin.Create
 
         private void addMedicins_Click(object sender, EventArgs e)
         {
-            foreach(var item in allMedicines)
+            var selected = medicinesList.SelectedItem.ToString();
+            foreach (var item in allMedicines)
             {
-                if (item.Name == medicinesList.SelectedItem.ToString())
+                if (item.Name == selected)
                 {
                     medicinesToSave.Add(item);
                     medicinesList.Items.Remove(medicinesList.SelectedItem);

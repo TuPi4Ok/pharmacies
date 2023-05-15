@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Репозитории">
+    <Position X="3.435" Y="0.5" Height="0.345" Width="1.059" />
+  </Comment>
+  <Comment CommentText="Модели">
+    <Position X="13.961" Y="0.5" Height="0.345" Width="1.059" />
+  </Comment>
+  <Comment CommentText="Сервисы">
+    <Position X="5.043" Y="8.352" Height="0.345" Width="1.059" />
+  </Comment>
+  <Comment CommentText="Перечисления">
+    <Position X="13.5" Y="8.75" Height="0.345" Width="1.059" />
+  </Comment>
+  <Comment CommentText="Контроллеры">
+    <Position X="8.926" Y="15.092" Height="0.345" Width="1.059" />
+  </Comment>
+  <Comment CommentText="Конфигурация">
+    <Position X="17.75" Y="8.75" Height="0.345" Width="1.059" />
+  </Comment>
+  <Class Name="pharmacies.repository.DiscountRepository">
+    <Position X="1.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACQAAAAAEAAAQAAAAAAAAAAACAAAAAEAAA=</HashCode>
+      <FileName>repository\DiscountRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.repository.FirmRepository">
+    <Position X="3.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAACQAAAAAAAAAQAAAAAAQAAAAAAAAAgEAAA=</HashCode>
+      <FileName>repository\FirmRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.repository.MedicineRepository">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAgAAAACYAAAAAAAAAQAAACAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>repository\MedicineRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.repository.PharmacyMedicineRepository">
+    <Position X="1.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAACQABAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>repository\PharmacyMedicineRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.repository.PharmacyRepository">
+    <Position X="3.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAACQAAAAAAAIAQAAIAAgAAAAAACAAAAEAAA=</HashCode>
+      <FileName>repository\PharmacyRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.repository.UserRepository">
+    <Position X="5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>repository\UserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.model.Discount">
+    <Position X="12" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAACgA=</HashCode>
+      <FileName>model\Discount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.model.Firm">
+    <Position X="13.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAAAAAAAAAAgAAAAIAQAAAIEAAACAAAAAAAACgA=</HashCode>
+      <FileName>model\Firm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.model.Medicine">
+    <Position X="15.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASCCAAEgAAAAAAAEAAggABQJAAIUBIACAgQAAgIAAgA=</HashCode>
+      <FileName>model\Medicine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.model.Pharmacy">
+    <Position X="12" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAgAAAQIAAIEAAACAAAAAAAAAgA=</HashCode>
+      <FileName>model\Pharmacy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.model.PharmacyMedicine">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>model\PharmacyMedicine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.model.User">
+    <Position X="17.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAEAAAABAAAAAAAAACAQAAAgEAAgA=</HashCode>
+      <FileName>model\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.service.discount.DiscountServiceImpl">
+    <Position X="0.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAwAAAAAAACAAAAAAAAAAAIAAIA=</HashCode>
+      <FileName>service\discount\DiscountServiceImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="pharmacies.service.firm.FirmServiceImpl">
+    <Position X="2.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAABAAAQAQAAQAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>service\firm\FirmServiceImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="pharmacies.service.madicine.MedicineServiceImpl">
+    <Position X="4" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACBACAAAAAAAAQAAAAAAAAAAwAAAAAAAAgAIAAAA=</HashCode>
+      <FileName>service\madicine\MedicineServiceImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="pharmacies.service.pharmacy.PharmacyServiceImpl">
+    <Position X="5.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAIAIAAACAAAAAAAAABAAAABCAAAIAAAA=</HashCode>
+      <FileName>service\pharmacy\PharmacyServiceImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="pharmacies.service.pharmacyMedicine.PharmacyMedicineServiceImpl">
+    <Position X="7.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAEAAAQAACAAAAAAgACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>service\pharmacyMedicine\PharmacyMedicineServiceImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="pharmacies.service.UserServiseImpl">
+    <Position X="9.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAJAAAAA=</HashCode>
+      <FileName>service\user\UserServiseImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="pharmacies.controller.admin.Create.CreateDiscountForm">
+    <Position X="0.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAEACCAABAAAAHEBBACAAAgAAAAASABAAAAQAA=</HashCode>
+      <FileName>controller\admin\Create\CreateDiscountForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.Create.CreateFirmForm">
+    <Position X="2.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAQgACCAABQAAACEBAQCAAIEAAAIACAAACAAAAA=</HashCode>
+      <FileName>controller\admin\Create\CreateFirmForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.Create.CreateMedicineForm">
+    <Position X="4" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAUgICCAABEAgkDEDARqQAAUwIQAQCAAJCACABE=</HashCode>
+      <FileName>controller\admin\Create\CreateMedicineForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.Create.CreatePharmacyForm">
+    <Position X="5.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIABAAQAACCAABEAAADEBARCIAIEAAQIASAABAAAAAA=</HashCode>
+      <FileName>controller\admin\Create\CreatePharmacyForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.Delete.DeleteForm">
+    <Position X="7.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAgAgCAAABEAAADAAQASAAAABAAAAAAAACAAAAA=</HashCode>
+      <FileName>controller\admin\Delete\DeleteForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.Read.ReadDiscountForm">
+    <Position X="11" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAACAAABAAAACAAAACAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\admin\Read\ReadDiscountForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.Read.ReadFirmForm">
+    <Position X="0.5" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACAAAACAAgAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>controller\admin\Read\ReadFirmForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.Read.ReadMedicineForm">
+    <Position X="14.5" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAACAAABAAAACAAAACAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\admin\Read\ReadMedicineForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.Read.ReadPharmacyForm">
+    <Position X="12.75" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABEAAACAAAACAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>controller\admin\Read\ReadPharmacyForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.StartForm" Collapsed="true">
+    <Position X="9.25" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAQAQAACAAABRBAICAAAAiAAEAAEAABSAAAAAQAAA=</HashCode>
+      <FileName>controller\admin\StartForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.Update.UpdateDiscountForm">
+    <Position X="2.25" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAQABAACCAABAAAADEBBACAAAgAAAAACABQAAAAAA=</HashCode>
+      <FileName>controller\admin\Update\UpdateDiscountForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.Update.UpdateFirmForm">
+    <Position X="4" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAgICCAABQAAACEBAQCQAIEAAAIACAAACAAABA=</HashCode>
+      <FileName>controller\admin\Update\UpdateFirmForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.Update.UpdateMedicineForm">
+    <Position X="5.75" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GCAAAAEgIiCgABEAAkDEDARCQAAUgIQAUCAAJCAiQBE=</HashCode>
+      <FileName>controller\admin\Update\UpdateMedicineForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.admin.Update.UpdatePharmacyForm">
+    <Position X="7.5" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAATCAABEAAADEBARCIAIEAAQIASAABAAAAQA=</HashCode>
+      <FileName>controller\admin\Update\UpdatePharmacyForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.boyer.StartForm">
+    <Position X="11" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAEACAAAhMAAIDAAAACAAAAAAAABCCAAAAAQIA=</HashCode>
+      <FileName>controller\buyer\StartForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.Login">
+    <Position X="9.25" Y="16.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAQAxBAAIGAAAACAAAAAAAEAEQYAAQAAAA=</HashCode>
+      <FileName>controller\Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.pharmacist.StartForm">
+    <Position X="9.25" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAkITAAAhMAAIDABAACAAgAAAAABCSAACAAQZA=</HashCode>
+      <FileName>controller\pharmacist\StartForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.controller.RegistrationForm">
+    <Position X="12.75" Y="27.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAwAhBAAIKAAAACAAACAAAkAAQIABAAAAA=</HashCode>
+      <FileName>controller\RegistrationForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.config.MyApplicationContext">
+    <Position X="16.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAACAAAQAAAAAAAgAAAAAAEAAAAAAAAgAAAAAAiAA=</HashCode>
+      <FileName>config\ApplicationContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="pharmacies.config.Session">
+    <Position X="18.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAQAABAAIAAAACAAAAAAAAAAAAAEAAAABAADAAAAAw=</HashCode>
+      <FileName>config\Session.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="pharmacies.service.discount.DiscountService">
+    <Position X="0.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAwAAAAAAACAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>service\discount\DiscountService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="pharmacies.service.firm.FirmService">
+    <Position X="2.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAQAQAAQAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>service\firm\FirmService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="pharmacies.service.madicine.MedicineService">
+    <Position X="4" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACBAAAAAAAAAAQAAAAAAAAAAwAAAAAAAAgAIAAAA=</HashCode>
+      <FileName>service\madicine\MedicineService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="pharmacies.service.pharmacy.PharmacyService">
+    <Position X="7.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAIAIAAAAAAAAAAAAABAAAABCAAAIAAAA=</HashCode>
+      <FileName>service\pharmacy\PharmacyService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="pharmacies.service.pharmacyMedicine.PharmacyMedicineService">
+    <Position X="5.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAQAACAAAAAAgACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>service\pharmacyMedicine\PharmacyMedicineService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="pharmacies.service.UserSerrvise">
+    <Position X="9.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>service\user\UserSerrvise.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="pharmacies.enums.MethodOfConsumption">
+    <Position X="11.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAQACAAIABAACAAAEEBAAAAAAAAAAA=</HashCode>
+      <FileName>enums\MethodOfConsumption.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="pharmacies.enums.Role">
+    <Position X="13.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAQAACAAAAAAAAAA=</HashCode>
+      <FileName>enums\Role.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="pharmacies.enums.TypesOfPackaging">
+    <Position X="15" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAgAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAAA=</HashCode>
+      <FileName>enums\TypesOfPackaging.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

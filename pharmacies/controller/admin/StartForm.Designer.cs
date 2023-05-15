@@ -121,7 +121,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Выбирите таблицу";
+            this.label1.Text = "Выберите таблицу";
             // 
             // StartForm
             // 

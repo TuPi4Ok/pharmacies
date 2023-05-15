@@ -225,9 +225,10 @@ namespace pharmacies.controller.admin.Update
 
         private void addMedicins_Click(object sender, EventArgs e)
         {
+            var selected = PharmacyList.SelectedItem.ToString();
             foreach (var item in allPharmacies)
             {
-                if (item.Name == PharmacyList.SelectedItem.ToString())
+                if (item.Name == selected)
                 {
                     pharmaciesToSave.Add(item);
                     PharmacyList.Items.Remove(PharmacyList.SelectedItem);

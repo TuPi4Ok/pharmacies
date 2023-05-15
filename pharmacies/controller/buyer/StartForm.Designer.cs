@@ -98,7 +98,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Выбирите лекарство";
+            this.label1.Text = "Выберите лекарство";
             // 
             // StartForm
             // 

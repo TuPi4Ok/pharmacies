@@ -18,4 +18,17 @@ namespace pharmacies.enums
         dermalAdministration,
         transdermally
     }
+
+    public enum CopyOfMethodOfConsumption
+    {
+        throughTheMmouth,
+        intravenously,
+        sublingual,
+        rectal,
+        intraocular,
+        intranasal,
+        inhalation,
+        dermalAdministration,
+        transdermally
+    }
 }

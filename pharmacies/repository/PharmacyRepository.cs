@@ -51,12 +51,10 @@ namespace pharmacies.repository
                     join pharmacyMedicine in db.PharmacyMedicines on pharmasy.Id equals pharmacyMedicine.PharmacyId
                     join medicine in db.Medicines on pharmacyMedicine.MedicineId equals medicine.Id
                     join discount in db.Discounts on medicine.Id equals discount.Id
-                    orderby /*medicine.Cost*/ medicine.Cost * ((100 - discount.Percent) / 100)
+                    orderby medicine.Cost * ((100 - discount.Percent) / 100)
                     where medicine1 == medicine.Name && medicine.BestBeforeDate > DateTime.Now
                     select pharmasy).ToList();
         }
-
-        
 
         public List<Pharmacy> findAllPharmacies()
         {

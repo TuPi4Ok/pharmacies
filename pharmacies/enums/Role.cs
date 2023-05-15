@@ -12,4 +12,11 @@ namespace pharmacies.enums
         PHARMACIST,
         BOYER
     }
+
+    public enum CopyOfRole
+    {
+        ADMIN,
+        PHARMACIST,
+        BOYER
+    }
 }

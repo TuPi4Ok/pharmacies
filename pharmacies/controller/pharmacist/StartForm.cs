@@ -139,7 +139,7 @@ namespace pharmacies.controller.pharmacist
             {
                 result += medicine.Name + "\n";
             }
-            if (result != "Результат: ")
+            if (result != "Результат:\n")
             {
                 MessageBox.Show(result);
             }
@@ -195,7 +195,7 @@ namespace pharmacies.controller.pharmacist
             {
                 result += medicine.Name + "\n";
             }
-            if (result != "Результат: ")
+            if (result != "Результат:\n")
             {
                 MessageBox.Show(result);
             }
